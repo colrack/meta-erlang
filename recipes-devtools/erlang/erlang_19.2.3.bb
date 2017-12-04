@@ -14,6 +14,7 @@ TARGET_CC_ARCH += "${LDFLAGS}"
 
 EXTRA_OEMAKE = "BUILD_CC='${BUILD_CC}'"
 
+EXTRA_OECONF_append_aarch64 = " --enable-sctp"
 EXTRA_OECONF_append_arm = " --enable-sctp"
 EXTRA_OECONF_append_armeb = " --enable-sctp"
 EXTRA_OECONF_append_mipsel = " --disable-smp-support --disable-hipe --enable-sctp"
