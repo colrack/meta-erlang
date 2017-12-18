@@ -4,8 +4,8 @@ LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=ff253ad767462c46be284da12dda33e8"
 
 S = "${WORKDIR}/git"
-SRCREV = "80f6be689d882480ef5e7d272d2d598704a29f7d"
-PV = "3.1.1-git${SRCPV}"
+SRCREV = "81a5711b6db4dedb1d151d39464f326be80e2285"
+PV = "3.4.7-git${SRCPV}"
 PR = "r0"
 
 SRC_URI = "git://github.com/rebar/rebar3;branch=master"
@@ -25,4 +25,3 @@ FILES_${PN} = "${bindir}"
 FILES_${PN}-dbg += "/.debug"
 
 BBCLASSEXTEND = "native nativesdk"
-
