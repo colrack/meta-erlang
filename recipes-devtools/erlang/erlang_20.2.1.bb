@@ -60,6 +60,13 @@ do_install() {
 
     # Actually wx is not suitable with erlang embedded
     rm -rf ${D}/${libdir}/erlang/lib/wx-*
+
+    if [ ! -f ${D}${libdir}/erlang/install_done ]; then
+      touch ${D}${libdir}/erlang/install_done
+      # upx --brute -9 ${D}${libdir}/erlang/erts-9.2/bin/beam.smp
+      erl -noshell -eval 'beam_lib:strip_release("${D}${libdir}/erlang"), halt(0).' 
+    fi
+
     chown -R root:root ${D}${libdir}/erlang
 }
 
